@@ -1,5 +1,6 @@
 # plainify-loader
 
+  [![npm version](https://badge.fury.io/js/plainify-loader.svg)](https://badge.fury.io/js/plainify-loader)
   [![Build Status](https://travis-ci.org/demiazz/plainify-loader.svg?branch=master)](https://travis-ci.org/demiazz/plainify-loader)
 
 Convert JSON to plain object.
