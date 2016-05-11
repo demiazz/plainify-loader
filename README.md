@@ -1,5 +1,7 @@
 # plainify-loader
 
+  [![Build Status](https://travis-ci.org/demiazz/plainify-loader.svg?branch=master)](https://travis-ci.org/demiazz/plainify-loader)
+
 Convert JSON to plain object.
 
 <a href="https://evilmartians.com/?utm_source=postcss">
@@ -38,6 +40,11 @@ the locales.
 }
 ```
 
+## Warning
+
+The plugin provides support only for values represented as strings or objects
+with strings values because developed for the particular usage.
+
 ## Installation
 
 ```sh
@@ -47,13 +54,13 @@ npm install plainify-loader
 ## Usage
 
 ```js
-var json = require('json!plainify!./file.json');
+import json from 'json!plainify!./file.json';
 // => returns file.json content as JSON parsed and plainified object
 ```
 
 or you can use it with `yaml-loader`
 
 ```js
-var json = require('json!plainify!yaml!./file.yml')
+import json from 'json!plainify!yaml!./file.yml';
 // => returns file.yml content as YAML parsed and plainified object
 ```
