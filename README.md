@@ -11,7 +11,7 @@ Convert JSON to plain object.
 
 ## Why?
 
-Plugin developed for usage with `react-intl` which can use only
+Loader developed for usage with `react-intl` which can use only
 plain objects as messages object.
 
 But I like structure used in `counterpart.js` or `Rails I18n`, where locales
@@ -42,7 +42,7 @@ the locales.
 
 ## Warning
 
-The plugin provides support only for values represented as strings or objects
+The loader provides support only for values represented as strings or objects
 with strings values because developed for the particular usage.
 
 ## Installation
