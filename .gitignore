@@ -1,0 +1,7 @@
+node_modules
+npm-debug
+.DS_Store
+dist
+*.log
+.nyc_output
+/index.js

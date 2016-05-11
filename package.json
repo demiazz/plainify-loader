@@ -1,0 +1,52 @@
+{
+  "name": "plainify-loader",
+  "version": "1.0.0",
+  "description": "Convert JSON to plain object.",
+  "main": "index.js",
+  "scripts": {
+    "test": "$(npm bin)/ava",
+    "test:watch": "$(npm bin)/ava --watch",
+    "test:coverage": "$(npm bin)/nyc npm test",
+    "prepublish": "$(npm bin)/babel -o index.js src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/demiazz/plainify-loader.git"
+  },
+  "keywords": [
+    "webpack",
+    "loader",
+    "json"
+  ],
+  "tags": [
+    "webpack",
+    "loader",
+    "json"
+  ],
+  "author": "Alexey Plutalov",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/demiazz/plainify-loader/issues"
+  },
+  "homepage": "https://github.com/demiazz/plainify-loader",
+  "devDependencies": {
+    "ava": "^0.14.0",
+    "babel-cli": "^6.8.0",
+    "babel-preset-es2015-node4": "^2.1.0",
+    "babel-register": "^6.8.0",
+    "nyc": "^6.4.4"
+  },
+  "ava": {
+    "files": [
+      "test/index.js"
+    ],
+    "source": [
+      "src/**/*.js"
+    ],
+    "tap": true,
+    "require": [
+      "babel-register"
+    ],
+    "babel": "inherit"
+  }
+}
