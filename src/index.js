@@ -6,7 +6,7 @@ function plainify(object, namespace = '') {
   for (const key of keys) {
     const value = object[key];
 
-    if (typeof value === 'string') {
+    if (typeof value === 'string' || typeof value === 'number' || value == null) {
       result[`${namespace}${key}`] = value;
     } else {
       const nested = plainify(value, `${namespace}${key}.`);
