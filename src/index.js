@@ -1,4 +1,4 @@
-function plainify(object, namespace = '') {
+function plainify(object, namespace = "") {
   let result = {};
 
   const keys = Object.keys(object);
@@ -6,7 +6,11 @@ function plainify(object, namespace = '') {
   for (const key of keys) {
     const value = object[key];
 
-    if (typeof value === 'string' || typeof value === 'number' || value == null) {
+    if (
+      typeof value === "string" ||
+      typeof value === "number" ||
+      value === null
+    ) {
       result[`${namespace}${key}`] = value;
     } else {
       const nested = plainify(value, `${namespace}${key}.`);
@@ -18,7 +22,6 @@ function plainify(object, namespace = '') {
   return result;
 }
 
-
 export default function plainifyLoader(source) {
   if (this && this.cacheable) {
     this.cacheable();
@@ -27,5 +30,5 @@ export default function plainifyLoader(source) {
   const parsedValue = JSON.parse(source);
   const processedValue = plainify(parsedValue);
 
-  return JSON.stringify(processedValue, undefined, '\t');
+  return JSON.stringify(processedValue, undefined, "\t");
 }

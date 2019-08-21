@@ -1,20 +1,19 @@
-import test from 'ava';
+import test from "ava";
 
-import plugin from '../src';
+import plugin from "../src";
 
-
-function processByPlugin(object) {
-  const source = JSON.stringify(object, undefined, '\t');
+const processByPlugin = object => {
+  const source = JSON.stringify(object, undefined, "\t");
   const plain = plugin(source);
 
   return JSON.parse(plain);
-}
+};
 
-
-test('does not convert plain objects', t => {
+test("does not convert plain objects", t => {
   const source = {
-    firstKey: 'firstValue',
-    secondKey: 'secondValue',
+    string: "string",
+    number: 1,
+    null: null
   };
   const expected = source;
   const actual = processByPlugin(source);
@@ -22,16 +21,20 @@ test('does not convert plain objects', t => {
   t.deepEqual(actual, expected);
 });
 
-test('convert nested objects', t => {
+test("convert nested objects", t => {
   const source = {
-    firstKey: 'firstValue',
+    string: "string",
+    number: 1,
+    null: null,
     nestedObject: {
-      secondKey: 'secondValue',
-    },
+      secondKey: "secondValue"
+    }
   };
   const expected = {
-    firstKey: 'firstValue',
-    'nestedObject.secondKey': 'secondValue',
+    string: "string",
+    number: 1,
+    null: null,
+    "nestedObject.secondKey": "secondValue"
   };
   const actual = processByPlugin(source);
 
