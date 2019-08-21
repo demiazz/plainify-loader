@@ -24,6 +24,11 @@
     "json"
   ],
   "author": "Alexey Plutalov",
+  "contributors": [
+    {
+      "url": "https://github.com/jumpgh"
+    }
+  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/demiazz/plainify-loader/issues"

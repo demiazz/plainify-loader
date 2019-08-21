@@ -1,7 +1,7 @@
 # plainify-loader
 
-  [![npm version](https://badge.fury.io/js/plainify-loader.svg)](https://badge.fury.io/js/plainify-loader)
-  [![Build Status](https://travis-ci.org/demiazz/plainify-loader.svg?branch=master)](https://travis-ci.org/demiazz/plainify-loader)
+[![npm version](https://badge.fury.io/js/plainify-loader.svg)](https://badge.fury.io/js/plainify-loader)
+[![Build Status](https://travis-ci.org/demiazz/plainify-loader.svg?branch=master)](https://travis-ci.org/demiazz/plainify-loader)
 
 Convert JSON to plain object.
 
@@ -55,13 +55,17 @@ npm install plainify-loader
 ## Usage
 
 ```js
-import json from 'json!plainify!./file.json';
+import json from "json!plainify!./file.json";
 // => returns file.json content as JSON parsed and plainified object
 ```
 
 or you can use it with `yaml-loader`
 
 ```js
-import json from 'json!plainify!yaml!./file.yml';
+import json from "json!plainify!yaml!./file.yml";
 // => returns file.yml content as YAML parsed and plainified object
 ```
+
+# Contributors
+
+Great thanks to @jumpgh for contributions.
